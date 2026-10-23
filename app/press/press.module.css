@@ -1,0 +1,462 @@
+/* ---------- intro ---------- */
+.intro {
+  background: var(--brown-200);
+}
+
+.introText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 642px;
+  margin: 0 auto;
+  padding: 76px 48px;
+  text-align: center;
+}
+
+.introTitle {
+  font-family: var(--font-playfair), serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -1.28px;
+  color: var(--black);
+}
+
+.introSubtitle {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* ---------- featured story ---------- */
+.featured {
+  background: var(--white);
+}
+
+.featuredInner {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 48px 64px;
+}
+
+.featuredPhoto {
+  position: relative;
+  flex: none;
+  width: 615px;
+  height: 480px;
+  overflow: hidden;
+}
+
+/* The Figma crop: a portrait photo at full width, shifted up by 24.69% of the frame. */
+.featuredPhotoImage {
+  position: absolute;
+  top: -24.69%;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+.featuredText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  min-width: 0;
+}
+
+.featuredTitle {
+  font-family: var(--font-playfair), serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.96px;
+  color: var(--black);
+}
+
+.featuredBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Masthead crop from the Figma: a 2085x863 export shown at 114% width, offset up and left. */
+.masthead {
+  position: relative;
+  width: 302px;
+  height: 34px;
+  overflow: hidden;
+}
+
+.mastheadImage {
+  position: absolute;
+  top: -159.71%;
+  left: -7.17%;
+  width: 114.18%;
+  height: 418.93%;
+  max-width: none;
+}
+
+.storyButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  gap: 4px;
+  height: 48px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* ---------- headlines grid ---------- */
+.headlines {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px 64px;
+}
+
+.topRule {
+  border: 0;
+  border-top: 1px solid var(--grey-500);
+}
+
+.headlinesHeading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 64px;
+  margin-bottom: 48px;
+}
+
+.headlinesTitle {
+  font-family: var(--font-playfair), serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -0.96px;
+  color: var(--black);
+}
+
+.headlinesSubtitle {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 463px;
+  border: 1px solid var(--grey-500);
+  background: var(--white);
+}
+
+.media {
+  position: relative;
+  flex: none;
+  height: 291px;
+  overflow: hidden;
+}
+
+.coverImage {
+  object-fit: cover;
+}
+
+/* Percentages keep the crop identical at 291px (desktop) and 236px (phone) frame heights. */
+.boxImage {
+  position: absolute;
+  top: -15.1%;
+  left: 50%;
+  width: 121%;
+  height: 143%;
+  max-width: none;
+  transform: translateX(-50%);
+  object-fit: cover;
+}
+
+.cropImage {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.source {
+  color: var(--papaya-500);
+}
+
+.date {
+  color: var(--grey-800);
+  text-align: right;
+}
+
+.cardTitle {
+  min-height: 56px;
+  font-family: var(--font-playfair), serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  letter-spacing: -0.4px;
+  color: var(--black);
+}
+
+.rule {
+  border: 0;
+  border-top: 1px solid var(--grey-500);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+.linkLabel {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
+}
+
+/* Phone-only "More stories" block. */
+.more {
+  display: none;
+}
+
+.desktopBreak {
+  display: inline;
+}
+
+/* ---------- tablet ---------- */
+@media (max-width: 1023px) {
+  .featuredInner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+    padding: 64px 24px 48px;
+  }
+
+  .featuredPhoto {
+    width: 100%;
+    height: 420px;
+  }
+
+  .introText {
+    padding: 64px 24px;
+  }
+
+  .headlines {
+    padding: 0 24px 56px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ---------- phone ---------- */
+@media (max-width: 639px) {
+  .intro,
+  .featured,
+  .headlines,
+  .more {
+    font-family: var(--font-inter), sans-serif;
+  }
+
+  .introText {
+    gap: 16px;
+    padding: 48px 24px;
+  }
+
+  .introTitle {
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: -0.88px;
+  }
+
+  .introSubtitle {
+    font-size: 16px;
+  }
+
+  .featuredInner {
+    gap: 28px;
+    padding: 40px 20px;
+  }
+
+  .featuredPhoto {
+    height: 274px;
+  }
+
+  .featuredText {
+    gap: 20px;
+  }
+
+  .featuredTitle {
+    font-size: 24px;
+    line-height: 1.12;
+    letter-spacing: -0.48px;
+  }
+
+  .desktopBreak {
+    display: none;
+  }
+
+  .featuredBody {
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .masthead {
+    width: 260px;
+    height: 29.33px;
+  }
+
+  .storyButton {
+    width: 174px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .headlines {
+    padding: 0 20px 48px;
+  }
+
+  .headlinesHeading {
+    gap: 12px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .headlinesTitle {
+    font-size: 34px;
+    line-height: 1.12;
+    letter-spacing: -0.68px;
+  }
+
+  .headlinesSubtitle {
+    font-size: 16px;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card {
+    min-height: 0;
+  }
+
+  .media {
+    height: 236px;
+  }
+
+  .body {
+    gap: 14px;
+  }
+
+  .text {
+    gap: 8px;
+  }
+
+  .meta {
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+
+  .date {
+    letter-spacing: 1px;
+  }
+
+  .cardTitle {
+    min-height: 0;
+    font-size: 22px;
+    line-height: 1.35;
+    letter-spacing: -0.44px;
+  }
+
+  .link {
+    height: 32px;
+    font-size: 18px;
+  }
+
+  .phoneHidden {
+    display: none;
+  }
+
+  .more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .moreCount {
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
+
+  .moreButton {
+    width: 170px;
+    height: 48px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--black);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+    cursor: pointer;
+  }
+}

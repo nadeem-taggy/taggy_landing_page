@@ -1,0 +1,600 @@
+/* ---------- shared ---------- */
+.cover {
+  object-fit: cover;
+}
+
+.bottom {
+  object-position: bottom;
+}
+
+/* ---------- hero ---------- */
+.hero {
+  overflow: hidden;
+  background: var(--brown-200);
+}
+
+.heroInner {
+  position: relative;
+  max-width: 1440px;
+  height: 486px;
+  margin: 0 auto;
+}
+
+.heroText {
+  position: absolute;
+  top: 109px;
+  left: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 546px;
+}
+
+.eyebrow {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--papaya-500);
+}
+
+.heroTitle {
+  font-family: var(--font-playfair), serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -1.28px;
+  white-space: nowrap;
+}
+
+.heroCopy {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.mosaic {
+  position: absolute;
+  inset: 0;
+}
+
+.col {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 190px;
+}
+
+/* Anchored to the right edge of the 1440px frame, so the mosaic stays fully visible on narrower screens. */
+.colA {
+  top: -55px;
+  right: 440px;
+}
+
+.colB {
+  top: -111px;
+  right: 244px;
+}
+
+.colC {
+  top: -55px;
+  right: 48px;
+}
+
+.tile {
+  position: relative;
+  flex: none;
+  height: 190px;
+}
+
+.tall {
+  height: 240px;
+}
+
+/* ---------- values ---------- */
+.values {
+  background: var(--white);
+}
+
+.valuesInner {
+  display: flex;
+  gap: 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 48px;
+}
+
+.valuesTitle {
+  flex: 0 0 568px;
+  font-family: var(--font-playfair), serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.96px;
+}
+
+.valueList {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.value {
+  display: flex;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--grey-500);
+}
+
+.valueNumber {
+  display: flex;
+  flex: 0 0 87px;
+  align-items: center;
+  height: 48px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--grey-step);
+}
+
+.valueText {
+  flex: 1;
+  font-family: var(--font-playfair), serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* ---------- people ---------- */
+.people {
+  background: var(--white);
+}
+
+.peopleInner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px 64px;
+}
+
+.rule {
+  border: 0;
+  border-top: 1px solid var(--grey-500);
+}
+
+.peopleBody {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  margin-top: 64px;
+}
+
+.peopleTitle {
+  max-width: 458px;
+  font-family: var(--font-playfair), serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.96px;
+}
+
+.peopleGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 463px;
+}
+
+.portrait {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.personName {
+  font-family: var(--font-playfair), serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.56px;
+  white-space: nowrap;
+}
+
+.personRole {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* ---------- tech team ---------- */
+.tech {
+  background: var(--blue-100);
+}
+
+.techInner {
+  display: flex;
+  gap: 64px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px 48px;
+}
+
+.techHeading {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.techTitle {
+  font-family: var(--font-playfair), serif;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -1.12px;
+}
+
+.techCards {
+  display: flex;
+  flex: none;
+  gap: 24px;
+  list-style: none;
+}
+
+.techCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 397px;
+  height: 530px;
+  padding: 16px;
+  background: var(--white);
+}
+
+/* ---------- community ---------- */
+.community {
+  overflow: hidden;
+  background: var(--white);
+}
+
+.communityInner {
+  position: relative;
+  max-width: 1440px;
+  height: 386px;
+  margin: 0 auto;
+}
+
+.communityText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 626px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.communityTitle {
+  font-family: var(--font-playfair), serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.96px;
+}
+
+.communityLead {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* On desktop the two rows are transparent wrappers; each photo is placed on the 1440px frame. */
+.snapRow {
+  display: contents;
+}
+
+.snap {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.snapRight {
+  width: 193.394px;
+  height: 199.771px;
+}
+
+.snapLeft {
+  width: 184.479px;
+  height: 191.622px;
+}
+
+.snapCard {
+  position: relative;
+  flex: none;
+  width: 156px;
+  height: 165.018px;
+  overflow: hidden;
+  border: 2px solid var(--white);
+  border-radius: 12px;
+}
+
+.snapRight .snapCard {
+  transform: rotate(15deg);
+}
+
+.snapLeft .snapCard {
+  transform: rotate(-10.94deg);
+}
+
+.p1 {
+  top: -36px;
+  right: 99.606px;
+}
+
+.p2 {
+  top: 137px;
+  right: 188.606px;
+}
+
+.p3 {
+  top: 303px;
+  right: 45.606px;
+}
+
+.p4 {
+  top: -69px;
+  left: 75px;
+}
+
+.p5 {
+  top: 109px;
+  left: 198px;
+}
+
+.p6 {
+  top: 276px;
+  left: 48px;
+}
+
+/* ---------- tablet and phone: the Figma mobile layout ---------- */
+@media (max-width: 1023px) {
+  .heroInner {
+    height: auto;
+  }
+
+  .heroText {
+    position: static;
+    width: auto;
+    padding: 48px 24px 32px;
+  }
+
+  .heroTitle {
+    font-size: 44px;
+    line-height: 1.15;
+    letter-spacing: -0.88px;
+    white-space: normal;
+  }
+
+  .eyebrow {
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+
+  .heroCopy {
+    font-size: 16px;
+  }
+
+  .mosaic {
+    position: relative;
+    inset: auto;
+    display: flex;
+    gap: 8px;
+    height: 324px;
+    padding: 0 24px;
+    overflow: hidden;
+  }
+
+  .col {
+    position: static;
+    flex: 1;
+    gap: 8px;
+    width: auto;
+    min-width: 0;
+  }
+
+  .colA,
+  .colC {
+    padding-top: 24px;
+  }
+
+  .col .tile {
+    height: 100px;
+  }
+
+  .col .tile:nth-child(2) {
+    height: 124px;
+  }
+
+  .valuesInner {
+    flex-direction: column;
+    gap: 32px;
+    padding: 56px 24px;
+  }
+
+  .valuesTitle {
+    flex: none;
+    font-size: 34px;
+    line-height: 1.12;
+    letter-spacing: -0.68px;
+  }
+
+  .value {
+    gap: 16px;
+  }
+
+  .valueNumber {
+    flex-basis: 32px;
+    height: auto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .valueText {
+    font-size: 23px;
+    line-height: 1.3;
+  }
+
+  .peopleInner {
+    padding: 0 24px 56px;
+  }
+
+  .peopleBody {
+    gap: 32px;
+    margin-top: 32px;
+  }
+
+  .peopleTitle {
+    max-width: none;
+    font-size: 34px;
+    line-height: 1.12;
+    letter-spacing: -0.68px;
+  }
+
+  .peopleGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 24px;
+  }
+
+  .card {
+    gap: 20px;
+    height: auto;
+  }
+
+  .card .portrait {
+    flex: none;
+    height: 416px;
+  }
+
+  .personName {
+    line-height: 1.15;
+    white-space: normal;
+  }
+
+  .personRole {
+    font-size: 16px;
+  }
+
+  .techInner {
+    flex-direction: column;
+    gap: 32px;
+    padding: 56px 24px;
+  }
+
+  .techTitle {
+    font-size: 34px;
+    line-height: 1.12;
+    letter-spacing: -0.68px;
+  }
+
+  .techCards {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .techCard {
+    gap: 20px;
+    width: auto;
+    height: auto;
+  }
+
+  .techCard .portrait {
+    flex: none;
+    height: 380px;
+  }
+
+  .community {
+    padding: 40px 24px;
+  }
+
+  .communityInner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: auto;
+  }
+
+  .communityText {
+    width: auto;
+    padding-top: 0;
+  }
+
+  .communityTitle {
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: -0.68px;
+  }
+
+  .communityLead {
+    font-size: 16px;
+  }
+
+  .snapRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 126px;
+    overflow: hidden;
+  }
+
+  .snap {
+    position: static;
+    flex: none;
+  }
+
+  .snapRight {
+    width: 119.128px;
+    height: 123.371px;
+  }
+
+  .snapLeft {
+    width: 113.613px;
+    height: 118.365px;
+  }
+
+  .snapCard {
+    width: 96px;
+    height: 102px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 639px) {
+  .peopleGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .techCards {
+    gap: 24px;
+  }
+}

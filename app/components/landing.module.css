@@ -1,0 +1,1148 @@
+/* ---------- shared ---------- */
+.cover {
+  object-fit: cover;
+}
+
+.buttonDark,
+.buttonPapaya,
+.buttonOutline,
+.buttonUnlock {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.buttonDark {
+  background: var(--black);
+  color: var(--white);
+}
+
+.buttonPapaya {
+  background: var(--papaya-500);
+  color: var(--white);
+}
+
+.buttonOutline {
+  background: var(--grey-50);
+  color: var(--black);
+  border: 1px solid var(--grey-900);
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.badges,
+.badgesSm {
+  display: flex;
+  align-items: center;
+  gap: 12.462px;
+}
+
+.badgesSm {
+  gap: 13.208px;
+}
+
+.badges a,
+.badgesSm a {
+  display: block;
+  line-height: 0;
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.lead18 {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.body16 {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.h2Large,
+.h2Large48,
+.h2Medium {
+  font-family: var(--font-playfair), serif;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.h2Large {
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -1.28px;
+}
+
+.h2Large48 {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -0.96px;
+}
+
+.h2Medium {
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.8px;
+}
+
+.h2Large48 em {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.subhead24 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* ---------- header ---------- */
+.promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 2px 24px;
+  background: var(--blue-100);
+  font-size: 15px;
+  text-align: center;
+}
+
+.promo strong {
+  font-weight: 600;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 80px;
+  padding: 10px 48px;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.navActive {
+  color: var(--papaya-500);
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.menuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.menuOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  overflow-y: auto;
+  background: var(--white);
+}
+
+.menuPromo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 12px 16px;
+  background: var(--blue-100);
+  font-size: 13px;
+  text-align: center;
+}
+
+.menuPromo strong {
+  font-weight: 600;
+}
+
+.menuTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 12px 16px;
+  background: var(--grey-50);
+}
+
+.menuClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--papaya-500);
+  cursor: pointer;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItem,
+.menuItemActive {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 16px;
+  border-bottom: 1px solid var(--grey-500);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.menuItemActive {
+  color: var(--papaya-500);
+}
+
+.menuCta {
+  padding: 24px 16px;
+}
+
+.menuCta .buttonDark {
+  width: 100%;
+}
+
+/* ---------- hero ---------- */
+.hero {
+  background: var(--brown-200);
+}
+
+.heroInner {
+  display: flex;
+  align-items: stretch;
+  max-width: 1440px;
+  min-height: 727px;
+  margin: 0 auto;
+}
+
+.heroText {
+  display: flex;
+  flex: 0 0 671px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 48px 0 49px;
+}
+
+.heroTitle {
+  font-family: var(--font-playfair), serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -1.28px;
+  white-space: nowrap;
+}
+
+.heroImage {
+  position: relative;
+  flex: 1;
+}
+
+/* ---------- how it works ---------- */
+.howSection {
+  background: var(--white);
+}
+
+.howInner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 120px 48px;
+}
+
+.howLeft {
+  display: flex;
+  flex: 0 0 568px;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.howPanel {
+  width: 100%;
+  height: auto;
+}
+
+.steps {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+}
+
+.step {
+  display: flex;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--grey-500);
+}
+
+.stepNumber {
+  display: flex;
+  flex: 0 0 87px;
+  align-items: center;
+  height: 48px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--grey-step);
+}
+
+.stepBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stepTitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* ---------- newsletter ---------- */
+.newsletter {
+  background: var(--blue-100);
+}
+
+.newsletterInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 48px;
+}
+
+.newsletterText {
+  display: flex;
+  flex: 0 1 626px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.newsletterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input {
+  width: 454px;
+  max-width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--powder-blue-500);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 1px 2px rgba(10, 13, 18, 0.05);
+  font: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+.input::placeholder {
+  color: var(--grey-800);
+}
+
+.input:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 2px;
+}
+
+.buttonUnlock {
+  width: 126px;
+  border: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.note {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* ---------- quality ---------- */
+.qualitySection {
+  background: var(--white);
+}
+
+.qualityInner {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 48px;
+}
+
+.qualityText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.paragraphs18 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.qualityPanel {
+  flex: none;
+  width: 615px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- listing service ---------- */
+.listingSection {
+  background: var(--white);
+}
+
+.listingInner {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px 64px;
+}
+
+.listingImage {
+  position: relative;
+  flex: 0 0 659px;
+}
+
+.listingPanel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+  overflow: hidden;
+  padding: 100px 48px;
+  background: var(--blue-100);
+}
+
+.listingTitle {
+  font-family: var(--font-playfair), serif;
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -1.12px;
+  white-space: nowrap;
+}
+
+.checks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.checks li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.checks li > img {
+  flex: none;
+}
+
+.listingCta {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ctaLabel {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ---------- about ---------- */
+.aboutSection {
+  background: var(--blue-100);
+}
+
+.aboutInner {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 48px;
+}
+
+.aboutText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.aboutCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.aboutIntro {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.aboutLead {
+  margin-top: 14px;
+}
+
+.aboutGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.narrow {
+  max-width: 654px;
+}
+
+.aboutImage {
+  position: relative;
+  flex: none;
+  align-self: stretch;
+  width: 615px;
+  overflow: hidden;
+}
+
+.aboutImageMobile {
+  position: relative;
+  width: 100%;
+  height: 434px;
+  overflow: hidden;
+}
+
+/* The Figma crop: a 219.87%-wide photo shifted left by 107.49% of the frame. */
+.aboutPhoto {
+  position: absolute;
+  top: 0;
+  left: -107.49%;
+  width: 219.87%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- preview pass ---------- */
+.previewSection {
+  background: var(--white);
+  padding-top: 80px;
+}
+
+.previewHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 0 48px;
+  text-align: center;
+}
+
+.phoneStrip {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 18px;
+  height: 560px;
+  margin-top: 64px;
+  overflow: hidden;
+}
+
+.phone {
+  flex: none;
+  max-width: none;
+}
+
+/* Phone-only variants (swapped in at the phone breakpoint). */
+.showOnPhone {
+  display: none;
+}
+
+.qualityPanelMobile {
+  height: auto;
+}
+
+.phoneCarousel {
+  overflow: hidden;
+}
+
+.phoneCarouselInner {
+  position: relative;
+}
+
+.phoneAbsolute {
+  position: absolute;
+  max-width: none;
+}
+
+.dots {
+  gap: 8px;
+  justify-content: center;
+}
+
+.dot,
+.dotActive {
+  display: block;
+  height: 6px;
+  border-radius: 9999px;
+  background: #d8d7d2;
+}
+
+.dot {
+  width: 6px;
+}
+
+.dotActive {
+  width: 18px;
+  background: var(--papaya-500);
+}
+
+/* ---------- footer ---------- */
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 64px 48px;
+}
+
+.footerTop,
+.footerBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.socials a {
+  display: block;
+  line-height: 0;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* ---------- tablet ---------- */
+@media (max-width: 1199px) {
+  .navLinks {
+    display: none;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+
+  .listingTitle {
+    font-size: 44px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 1023px) {
+  .heroInner,
+  .howInner,
+  .qualityInner,
+  .aboutInner,
+  .listingInner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .heroText {
+    flex: none;
+    padding: 64px 24px;
+  }
+
+  .heroImage {
+    flex: none;
+    height: 480px;
+  }
+
+  .howInner,
+  .qualityInner {
+    padding: 64px 24px;
+    gap: 48px;
+  }
+
+  .howLeft {
+    flex: none;
+  }
+
+  .newsletterInner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 24px;
+  }
+
+  .newsletterText {
+    flex: none;
+  }
+
+  .qualityPanel {
+    align-self: center;
+  }
+
+  .listingInner {
+    padding: 0 24px 48px;
+  }
+
+  .listingImage {
+    flex: none;
+    height: 480px;
+  }
+
+  .listingPanel {
+    padding: 48px 24px;
+  }
+
+  .aboutInner {
+    padding: 64px 24px;
+    gap: 48px;
+  }
+
+  .aboutImage {
+    width: 100%;
+    height: 560px;
+  }
+
+  .footer,
+  .navBar {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .footerTop,
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .footerLinks {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+}
+
+/* ---------- phone (402px Figma frame) ---------- */
+@media (max-width: 639px) {
+  .hideOnPhone {
+    display: none;
+  }
+
+  .showOnPhone {
+    display: block;
+  }
+
+  .dots.showOnPhone {
+    display: flex;
+  }
+
+  /* The phone design sets body copy in Inter rather than Inter Tight. */
+  .lead,
+  .lead18,
+  .body16,
+  .paragraphs18,
+  .checks,
+  .aboutCopy,
+  .subhead24,
+  .ctaLabel,
+  .note,
+  .input,
+  .footerLinks,
+  .promo,
+  .buttonDark,
+  .buttonPapaya,
+  .buttonOutline,
+  .buttonUnlock {
+    font-family: var(--font-inter), sans-serif;
+  }
+
+  /* header */
+  .promo {
+    padding: 12px 24px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .navBar {
+    height: 76px;
+    padding: 0 24px;
+  }
+
+  .navActions {
+    gap: 16px;
+  }
+
+  .navActions .buttonDark {
+    width: 120px;
+  }
+
+  .menuButton {
+    width: 24px;
+  }
+
+  /* shared type sizes */
+  .h2Large,
+  .h2Large48,
+  .listingTitle {
+    font-size: 34px;
+    line-height: 1.12;
+    letter-spacing: -0.68px;
+    white-space: normal;
+  }
+
+  .h2Medium {
+    font-size: 32px;
+    line-height: 1.12;
+    letter-spacing: -0.64px;
+  }
+
+  .lead,
+  .lead18,
+  .paragraphs18,
+  .checks,
+  .aboutCopy {
+    font-size: 16px;
+  }
+
+  .buttonRow {
+    flex-direction: column;
+  }
+
+  .buttonRow > * {
+    width: 100%;
+  }
+
+  .badges,
+  .badgesSm {
+    gap: 12px;
+  }
+
+  .badges a:first-child img {
+    width: 148.5px;
+    height: 44px;
+  }
+
+  .badges a:last-child img {
+    width: 132px;
+    height: 44px;
+  }
+
+  /* hero */
+  .heroText {
+    gap: 12px;
+    padding: 40px 24px;
+  }
+
+  .heroTitle {
+    margin-bottom: 8px;
+    font-size: 42px;
+    line-height: 1.12;
+    letter-spacing: -0.84px;
+    white-space: normal;
+  }
+
+  .heroText .badges {
+    margin-top: 8px;
+  }
+
+  .heroImage {
+    height: 380px;
+  }
+
+  /* how it works */
+  .howInner {
+    gap: 32px;
+    padding: 56px 24px;
+  }
+
+  .howLeft {
+    gap: 32px;
+  }
+
+  .howPanel {
+    width: 100%;
+    height: auto;
+  }
+
+  .step {
+    gap: 16px;
+  }
+
+  .stepNumber {
+    flex-basis: 29px;
+    align-items: flex-start;
+    height: auto;
+    font-family: var(--font-inter), sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #969590;
+  }
+
+  .stepBody {
+    gap: 10px;
+  }
+
+  .stepTitle {
+    font-size: 22px;
+  }
+
+  /* newsletter */
+  .newsletterInner {
+    align-items: stretch;
+    gap: 24px;
+    padding: 36px 24px;
+  }
+
+  .newsletterText {
+    gap: 12px;
+  }
+
+  .newsletterForm {
+    gap: 12px;
+    width: 100%;
+  }
+
+  .formRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .input,
+  .buttonUnlock {
+    width: 100%;
+  }
+
+  .buttonUnlock {
+    font-weight: 600;
+  }
+
+  /* quality */
+  .qualityInner {
+    gap: 32px;
+    padding: 56px 24px;
+  }
+
+  .qualityText {
+    gap: 32px;
+  }
+
+  .qualityPanelMobile {
+    width: 100%;
+  }
+
+  /* listing service */
+  .listingInner {
+    padding: 0 24px 56px;
+  }
+
+  .listingImage {
+    height: 370px;
+  }
+
+  .listingPanel {
+    gap: 28px;
+    padding: 32px 24px;
+  }
+
+  .checks {
+    gap: 20px;
+  }
+
+  .checks li {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .checks li > img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .listingCta {
+    gap: 12px;
+  }
+
+  .ctaLabel {
+    font-size: 16px;
+  }
+
+  /* about: the photo moves between the intro and the chapters */
+  .aboutInner {
+    gap: 32px;
+    padding: 56px 24px;
+  }
+
+  .aboutCopy {
+    gap: 32px;
+  }
+
+  .aboutIntro {
+    gap: 16px;
+  }
+
+  .aboutLead {
+    margin-top: 0;
+  }
+
+  .subhead24 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  /* preview pass: product screen centred, slivers of home and seller either side */
+  .previewSection {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 56px 0 40px;
+  }
+
+  .previewHeading {
+    align-items: flex-start;
+    gap: 16px;
+    padding: 0 24px;
+    text-align: left;
+  }
+
+  .phoneCarousel {
+    height: 580px;
+  }
+
+  .phoneCarouselInner {
+    left: 50%;
+    width: 402px;
+    height: 580px;
+    transform: translateX(-50%);
+  }
+
+  /* footer */
+  .footer {
+    gap: 32px;
+    padding: 40px 24px;
+  }
+
+  .footerTop,
+  .footerBottom {
+    gap: 32px;
+  }
+
+  .socials {
+    gap: 23px;
+  }
+
+  .socials img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footerLinks {
+    gap: 20px;
+    width: 100%;
+    padding-top: 32px;
+    border-top: 1px solid var(--grey-500);
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}

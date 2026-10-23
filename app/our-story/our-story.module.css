@@ -1,0 +1,913 @@
+.page {
+  --ink-soft: #535351;
+  --butter-600: #e6d5be;
+  background: var(--white);
+}
+
+/* ---------- shared bits ---------- */
+.inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--papaya-500);
+}
+
+.display64,
+.display48,
+.display40,
+.display34 {
+  font-family: var(--font-playfair), serif;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.display64 {
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -1.28px;
+}
+
+.display48 {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -0.96px;
+}
+
+.display40 {
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.8px;
+}
+
+.display48 em,
+.bornText em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.body18 {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.body16Muted {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--grey-800);
+}
+
+/* numbered rows, used by "What we were looking for" and "This is just the beginning" */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+}
+
+.step {
+  display: flex;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--grey-500);
+}
+
+.stepNum {
+  display: flex;
+  flex: 0 0 87px;
+  align-items: center;
+  height: 48px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--grey-step);
+}
+
+.stepBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.stepTitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.stepDesc {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.promise {
+  font-family: var(--font-playfair), serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+/* ---------- intro ---------- */
+.intro {
+  background: var(--brown-200);
+}
+
+.introInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 76px 48px;
+}
+
+.introText {
+  display: flex;
+  flex: 0 0 546px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.introTitle {
+  white-space: nowrap;
+}
+
+.toc {
+  flex: 0 0 548px;
+  padding: 24px;
+  background: var(--white);
+}
+
+.tocLabel {
+  margin-bottom: 16px;
+}
+
+.tocList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  font-size: 18px;
+}
+
+.tocRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--grey-500);
+  line-height: 1.5;
+}
+
+.tocRow:last-child {
+  border-bottom: 0;
+}
+
+.tocNum {
+  flex: none;
+  width: 54px;
+  color: var(--grey-step);
+}
+
+.tocRow a {
+  flex: 1;
+  color: var(--black);
+}
+
+.tocRow a:hover {
+  color: var(--papaya-500);
+}
+
+/* ---------- something that didn't exist ---------- */
+.need {
+  scroll-margin-top: 16px;
+}
+
+.needInner {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 120px 48px;
+}
+
+.needLeft {
+  display: flex;
+  flex: 0 0 568px;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.needTitle {
+  white-space: nowrap;
+}
+
+.cropBox {
+  position: relative;
+  height: 231px;
+  overflow: hidden;
+}
+
+.cropImage {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.needRight {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  min-width: 0;
+}
+
+.needLabel {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+/* ---------- no more hassle band ---------- */
+.born {
+  background: var(--blue-100);
+  overflow: hidden;
+}
+
+.bornInner {
+  position: relative;
+  height: 362px;
+}
+
+.bornText {
+  position: absolute;
+  top: 73px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-playfair), serif;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--black);
+}
+
+.bornText p + p {
+  margin-top: 14px;
+}
+
+.bornText p:not(:last-child) {
+  color: var(--ink-soft);
+}
+
+.pill {
+  position: absolute;
+  top: 283px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 24px;
+  border-radius: 50px;
+  background: var(--white);
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.pill img {
+  display: block;
+}
+
+.tile {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tileInner {
+  position: relative;
+  flex: none;
+  width: 156px;
+  height: 165.018px;
+  overflow: hidden;
+  border: 2px solid var(--white);
+  border-radius: 12px;
+}
+
+.tileTiltLeft .tileInner {
+  transform: rotate(-10.94deg);
+}
+
+.tileTiltRight .tileInner {
+  transform: rotate(15deg);
+}
+
+.tileImage {
+  position: absolute;
+  top: -6.33%;
+  left: 0;
+  width: 100%;
+  height: 118.13%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.tile1 {
+  top: 22px;
+  left: 122px;
+  width: 184.479px;
+  height: 191.622px;
+}
+
+.tile2 {
+  top: 22px;
+  right: 112.606px;
+  width: 193.394px;
+  height: 199.771px;
+}
+
+.tile3 {
+  top: 201px;
+  right: 224.606px;
+  width: 193.394px;
+  height: 199.771px;
+}
+
+.tile4 {
+  top: 214px;
+  left: 225px;
+  width: 184.479px;
+  height: 191.622px;
+}
+
+/* ---------- two businesses ---------- */
+.chapter {
+  scroll-margin-top: 16px;
+}
+
+.chapterInner {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  padding: 100px 48px;
+}
+
+.chapterRow {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  width: 100%;
+  height: 586px;
+}
+
+.chapterText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: 48px;
+  min-width: 0;
+}
+
+.chapterCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chapterStrong {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.chapterPhoto {
+  position: relative;
+  flex: none;
+  align-self: stretch;
+  width: 615px;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+/* ---------- note from the COO ---------- */
+.coo {
+  scroll-margin-top: 16px;
+}
+
+.cooInner {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 0 48px 64px;
+}
+
+.cooRule {
+  border: 0;
+  border-top: 1px solid var(--grey-500);
+}
+
+.cooBody {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.cooHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.cooTitle {
+  flex: 0 0 529px;
+}
+
+.cooIntro {
+  max-width: 485px;
+}
+
+.letter {
+  display: flex;
+  align-items: flex-start;
+}
+
+.letterPhoto {
+  position: relative;
+  flex: none;
+  align-self: stretch;
+  width: 659px;
+}
+
+.letterCard {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+  padding: 48px;
+  background: var(--butter-lemon-500);
+}
+
+.quoteBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quoteText {
+  font-family: var(--font-playfair), serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.64px;
+  color: var(--black);
+}
+
+.signoff {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.signoffRule {
+  border: 0;
+  border-top: 1px solid var(--butter-600);
+}
+
+/* The Figma text box is 22px tall; the script glyphs overflow it, so the image does too. */
+.signatureWrap {
+  position: relative;
+  height: 22px;
+}
+
+.signature {
+  position: absolute;
+  top: -23px;
+  left: 0;
+  display: block;
+  width: 180px;
+  height: auto;
+}
+
+.signatureText {
+  display: none;
+  font-size: 16px;
+  line-height: 2.4;
+  letter-spacing: -0.32px;
+  color: var(--black);
+}
+
+/* ---------- just the beginning ---------- */
+.beginning {
+  scroll-margin-top: 16px;
+}
+
+.beginningInner {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 80px 48px;
+  min-height: 596px;
+}
+
+.beginningLeft {
+  display: flex;
+  flex: 0 0 568px;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.beginningList {
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+  align-self: stretch;
+}
+
+/* ---------- download band ---------- */
+.download {
+  background: var(--blue-100);
+}
+
+.downloadInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 40px 48px;
+}
+
+.downloadText {
+  display: flex;
+  flex: 0 1 560px;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.downloadLead {
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.badgesLg {
+  display: flex;
+  align-items: center;
+  gap: 16.532px;
+}
+
+.badgesLg a {
+  display: block;
+  line-height: 0;
+}
+
+.badgesSm {
+  display: none;
+}
+
+/* ---------- tablet ---------- */
+@media (max-width: 1199px) {
+  .introTitle,
+  .needTitle {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 1023px) {
+  .introInner,
+  .needInner,
+  .beginningInner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 56px 24px;
+    gap: 32px;
+    min-height: 0;
+  }
+
+  .introText,
+  .toc,
+  .needLeft,
+  .beginningLeft {
+    flex: none;
+  }
+
+  .display64 {
+    font-size: 42px;
+    letter-spacing: -0.84px;
+    line-height: 1.12;
+  }
+
+  .display48 {
+    font-size: 34px;
+    letter-spacing: -0.68px;
+    line-height: 1.12;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+    letter-spacing: 0;
+  }
+
+  .toc {
+    padding: 20px;
+  }
+
+  .tocLabel {
+    margin-bottom: 0;
+  }
+
+  .tocList {
+    font-size: 15px;
+    gap: 0;
+  }
+
+  .tocRow {
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .tocNum {
+    width: 26px;
+    font-size: 14px;
+  }
+
+  .cropBox {
+    height: 200px;
+  }
+
+  .stepNum {
+    flex: 0 0 44px;
+    height: auto;
+    align-items: flex-start;
+    font-family: var(--font-inter-tight), sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .stepTitle {
+    font-size: 24px;
+  }
+
+  .stepBody {
+    gap: 12px;
+  }
+
+  .needLabel {
+    font-size: 18px;
+  }
+
+  /* born: grid of two tilted photo pairs around the statement */
+  .bornInner {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    justify-items: center;
+    column-gap: 48px;
+    row-gap: 32px;
+    height: auto;
+    padding: 36px 24px;
+  }
+
+  .bornText,
+  .pill,
+  .tile {
+    position: static;
+    transform: none;
+  }
+
+  .bornText {
+    order: 3;
+    grid-column: 1 / -1;
+    font-size: 30px;
+    letter-spacing: -0.6px;
+    line-height: 1.15;
+    white-space: normal;
+  }
+
+  .bornText p + p {
+    margin-top: 0;
+  }
+
+  .pill {
+    order: 4;
+    grid-column: 1 / -1;
+    gap: 8px;
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .tile1,
+  .tile4 {
+    width: 151.294px;
+    height: 156.839px;
+  }
+
+  .tile2,
+  .tile3 {
+    width: 158.579px;
+    height: 163.529px;
+  }
+
+  .tile1 {
+    order: 1;
+  }
+
+  .tile2 {
+    order: 2;
+  }
+
+  .tile4 {
+    order: 5;
+  }
+
+  .tile3 {
+    order: 6;
+  }
+
+  .tileInner {
+    width: 128px;
+    height: 135px;
+    border-radius: 10px;
+  }
+
+  .chapterInner {
+    padding: 56px 24px;
+  }
+
+  .chapterRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+    height: auto;
+  }
+
+  .chapterText {
+    gap: 32px;
+  }
+
+  .chapterCopy {
+    font-size: 16px;
+  }
+
+  .chapterCopy .body18 {
+    font-size: 16px;
+  }
+
+  .chapterStrong {
+    font-size: 16px;
+  }
+
+  .chapterPhoto {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 354 / 337.307;
+  }
+
+  .cooInner {
+    gap: 32px;
+    padding: 0 24px 8px;
+  }
+
+  .cooBody {
+    gap: 32px;
+  }
+
+  .cooHeader {
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 16px;
+  }
+
+  .cooTitle {
+    flex: none;
+  }
+
+  .cooIntro {
+    max-width: none;
+  }
+
+  .cooIntro.body18 {
+    font-size: 16px;
+  }
+
+  .letter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .letterPhoto {
+    width: 100%;
+    height: 410px;
+  }
+
+  .letterCard {
+    padding: 24px;
+  }
+
+  .letterCard .body18 {
+    font-size: 16px;
+  }
+
+  .quoteText {
+    font-size: 27px;
+    line-height: 1.08;
+    letter-spacing: -0.54px;
+  }
+
+  .signoff {
+    gap: 0;
+  }
+
+  .signoffRule {
+    margin-bottom: 0;
+  }
+
+  .signatureWrap {
+    display: none;
+  }
+
+  .signatureText {
+    display: block;
+  }
+
+  .promise {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .beginningList .stepNum {
+    line-height: 1.5;
+  }
+
+  .downloadInner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 40px 24px;
+  }
+
+  .downloadText {
+    flex: none;
+    gap: 16px;
+  }
+
+  .downloadTitle {
+    font-size: 34px;
+    line-height: 1.08;
+    letter-spacing: -0.68px;
+  }
+
+  .downloadLead {
+    font-size: 16px;
+  }
+
+  .badgesLg {
+    display: none;
+  }
+
+  .badgesSm {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .badgesSm a {
+    display: block;
+    line-height: 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .stepNum {
+    flex-basis: 28px;
+    margin-right: 16px;
+  }
+
+  .beginningList .stepNum {
+    flex-basis: 28px;
+  }
+}
