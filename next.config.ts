@@ -5,7 +5,7 @@ import type { NextConfig } from "next";
 const basePath = process.env.BASE_PATH;
 
 const nextConfig: NextConfig = basePath
-  ? { output: "export", basePath, images: { loader: "custom", loaderFile: "./image-loader.ts" }, env: { BASE_PATH: basePath } }
+  ? { output: "export", trailingSlash: true, basePath, images: { loader: "custom", loaderFile: "./image-loader.ts" }, env: { BASE_PATH: basePath } }
   : { cacheComponents: true, partialPrefetching: true };
 
 export default nextConfig;
