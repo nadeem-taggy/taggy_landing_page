@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MobileMenu } from "./MobileMenu";
+import { NavLink } from "./NavLink";
 import { PromoText } from "./PromoText";
 import s from "./landing.module.css";
 
@@ -28,21 +29,21 @@ export function SiteHeader({ active }: { active?: string }) {
           </Link>
           <nav className={s.navLinks} aria-label="Main">
             {links.map((link) => (
-              <Link
+              <NavLink
                 key={link.label}
                 href={link.href}
                 className={link.label === active ? s.navActive : undefined}
                 aria-current={link.label === active ? "page" : undefined}
               >
                 {link.label}
-              </Link>
+              </NavLink>
             ))}
           </nav>
         </div>
         <div className={s.navActions}>
-          <Link className={s.buttonDark} href="/#download">
+          <NavLink className={s.buttonDark} href="/#download">
             Download App
-          </Link>
+          </NavLink>
           <MobileMenu links={links} active={active} />
         </div>
       </div>

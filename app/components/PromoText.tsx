@@ -2,7 +2,7 @@
 export function PromoText() {
   return (
     <p>
-      Want us to upload your items on your behalf, book our{" "}
+      Want us to upload your items on your behalf? Book our{" "}
       <strong>listing service</strong> today.
     </p>
   );

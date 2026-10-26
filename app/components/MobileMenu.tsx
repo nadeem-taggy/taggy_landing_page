@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import { NavLink } from "./NavLink";
 import { PromoText } from "./PromoText";
 import s from "./landing.module.css";
 
@@ -59,7 +59,7 @@ export function MobileMenu({ links, active }: MobileMenuProps) {
           </div>
           <nav className={s.menuList} aria-label="Main">
             {links.map((link) => (
-              <Link
+              <NavLink
                 key={link.label}
                 href={link.href}
                 className={link.label === active ? s.menuItemActive : s.menuItem}
@@ -68,13 +68,13 @@ export function MobileMenu({ links, active }: MobileMenuProps) {
               >
                 <span>{link.label}</span>
                 <Image src="/icons/chevron-right.svg" alt="" width={24} height={24} />
-              </Link>
+              </NavLink>
             ))}
           </nav>
           <div className={s.menuCta}>
-            <Link className={s.buttonDark} href="/#download" onClick={() => setOpen(false)}>
+            <NavLink className={s.buttonDark} href="/#download" onClick={() => setOpen(false)}>
               Download App
-            </Link>
+            </NavLink>
           </div>
         </div>
       )}
