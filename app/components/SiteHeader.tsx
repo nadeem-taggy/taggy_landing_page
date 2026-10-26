@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MobileMenu } from "./MobileMenu";
+import { PromoText } from "./PromoText";
 import s from "./landing.module.css";
 
 const links = [
@@ -18,10 +19,7 @@ export function SiteHeader({ active }: { active?: string }) {
   return (
     <header>
       <div className={s.promo}>
-        <p>
-          Want us to upload your items on your behalf, book our{" "}
-          <strong>listing service</strong> today.
-        </p>
+        <PromoText />
       </div>
       <div className={s.navBar}>
         <div className={s.navLeft}>

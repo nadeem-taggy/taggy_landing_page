@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { PromoText } from "./PromoText";
 import s from "./landing.module.css";
 
 type MobileMenuProps = {
@@ -43,10 +44,7 @@ export function MobileMenu({ links, active }: MobileMenuProps) {
       {open && (
         <div id="mobile-menu" className={s.menuOverlay} role="dialog" aria-modal="true" aria-label="Menu">
           <div className={s.menuPromo}>
-            <p>
-              Want us to upload your items on your behalf, book our{" "}
-              <strong>listing service</strong> today.
-            </p>
+            <PromoText />
           </div>
           <div className={s.menuTop}>
             <Image src="/icons/taggy-logo.svg" alt="Taggy" width={87} height={20} />
