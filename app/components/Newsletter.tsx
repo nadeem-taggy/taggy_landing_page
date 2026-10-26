@@ -9,7 +9,7 @@ type NewsletterProps = {
 };
 
 export function Newsletter({
-  description = "Get first look at standout pieces, new arrivals and Taggy offers worth knowing about.",
+  description = "Be the first to discover standout pieces, curated drops and Taggy offers.",
   buttonLabel = "Unlock access",
 }: NewsletterProps) {
   const [submitted, setSubmitted] = useState(false);
@@ -18,7 +18,7 @@ export function Newsletter({
     <section className={s.newsletter}>
       <div className={s.newsletterInner}>
         <div className={s.newsletterText}>
-          <h2 className={s.h2Medium}>Be kept up to date.</h2>
+          <h2 className={s.h2Medium}>Get First Access</h2>
           <p className={s.body16}>{description}</p>
         </div>
         <form
@@ -48,7 +48,7 @@ export function Newsletter({
           <p className={s.note} aria-live="polite">
             {submitted
               ? "Thanks — you're on the list."
-              : "Your data is protected. We never spam in your inbox"}
+              : "Your data is protected. We never spam your inbox"}
           </p>
         </form>
       </div>

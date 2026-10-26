@@ -78,7 +78,6 @@ export default function BlogsPage() {
         </section>
 
         <Newsletter
-          description="For all our updates provide your contact details."
           buttonLabel="Update me!"
         />
       </main>
