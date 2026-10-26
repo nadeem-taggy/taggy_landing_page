@@ -38,16 +38,18 @@ jobs:
       - name: Deploy on server
         run: |
           # deploy.sh is installed by the backend deploy: run that workflow first.
-          CMD_ID=$(aws ssm send-command \
+          # The server can live in a different region from ECR and the SSM secrets (AWS_REGION).
+          R="${{ vars.INSTANCE_REGION || vars.AWS_REGION }}"
+          CMD_ID=$(aws ssm send-command --region "$R" \
             --instance-ids "${{ vars.INSTANCE_ID }}" \
             --document-name AWS-RunShellScript \
             --comment "deploy landing ${{ github.sha }}" \
             --parameters 'commands=["/opt/taggy/deploy.sh landing ${{ github.sha }}"],executionTimeout=["900"]' \
             --query Command.CommandId --output text)
-          aws ssm wait command-executed --command-id "$CMD_ID" --instance-id "${{ vars.INSTANCE_ID }}" || true
-          aws ssm get-command-invocation --command-id "$CMD_ID" --instance-id "${{ vars.INSTANCE_ID }}" \
+          aws ssm wait command-executed --region "$R" --command-id "$CMD_ID" --instance-id "${{ vars.INSTANCE_ID }}" || true
+          aws ssm get-command-invocation --region "$R" --command-id "$CMD_ID" --instance-id "${{ vars.INSTANCE_ID }}" \
             --query '[Status,StandardOutputContent,StandardErrorContent]' --output text
-          [ "$(aws ssm get-command-invocation --command-id "$CMD_ID" --instance-id "${{ vars.INSTANCE_ID }}" --query Status --output text)" = Success ]
+          [ "$(aws ssm get-command-invocation --region "$R" --command-id "$CMD_ID" --instance-id "${{ vars.INSTANCE_ID }}" --query Status --output text)" = Success ]
 
       - name: Smoke test
         run: |
