@@ -3,10 +3,10 @@ import { StoreBadges } from "./StoreBadges";
 import s from "./landing.module.css";
 
 const socials = [
-  { label: "Instagram", src: "/icons/instagram.svg" },
-  { label: "TikTok", src: "/icons/tiktok.svg" },
-  { label: "Facebook", src: "/icons/facebook.svg" },
-  { label: "LinkedIn", src: "/icons/linkedin.svg" },
+  { label: "Instagram", href: "https://www.instagram.com/taggy.ae", src: "/icons/instagram.svg" },
+  { label: "TikTok", href: "https://www.tiktok.com/@taggyunfiltered", src: "/icons/tiktok.svg" },
+  { label: "Facebook", href: "https://www.facebook.com/p/Taggy-61580234867650/", src: "/icons/facebook.svg" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/taggy-ae/", src: "/icons/linkedin.svg" },
 ];
 
 const links = ["Helpful guides", "Faqs", "Contact us", "Privacy policy", "Terms & conditions"];
@@ -21,7 +21,13 @@ export function SiteFooter() {
       <div className={s.footerBottom}>
         <div className={s.socials}>
           {socials.map((social) => (
-            <a key={social.label} href="#" aria-label={social.label}>
+            <a
+              key={social.label}
+              href={social.href}
+              aria-label={social.label}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image src={social.src} alt="" width={32} height={32} />
             </a>
           ))}
