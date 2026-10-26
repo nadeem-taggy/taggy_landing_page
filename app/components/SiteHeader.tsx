@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MobileMenu } from "./MobileMenu";
 import { NavLink } from "./NavLink";
 import { PromoText } from "./PromoText";
+import { SHOW_BLOGS } from "../site-config";
 import s from "./landing.module.css";
 
 const links = [
@@ -13,7 +14,7 @@ const links = [
   { label: "Meet the Team", href: "/meet-the-team" },
   { label: "Our Story", href: "/our-story" },
   { label: "Press", href: "/press" },
-  { label: "Blogs", href: "/blogs" },
+  ...(SHOW_BLOGS ? [{ label: "Blogs", href: "/blogs" }] : []),
 ];
 
 export function SiteHeader({ active }: { active?: string }) {
