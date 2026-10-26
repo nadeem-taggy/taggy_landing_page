@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { WHATSAPP_BOOKING_URL } from "../site-config";
 import s from "./landing.module.css";
 
 const points = [
@@ -33,7 +34,12 @@ export function ListingService() {
           <div className={s.listingCta}>
             <p className={s.ctaLabel}>See our Listing Team in action</p>
             <div className={s.buttonRow}>
-              <a className={s.buttonDark} href="#">
+              <a
+                className={s.buttonDark}
+                href={WHATSAPP_BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Contact us to Book Now
               </a>
               <a className={s.buttonDark} href="#">

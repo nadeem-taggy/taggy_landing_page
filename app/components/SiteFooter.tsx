@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { WHATSAPP_URL } from "../site-config";
 import { StoreBadges } from "./StoreBadges";
 import s from "./landing.module.css";
 
@@ -9,7 +10,11 @@ const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/company/taggy-ae/", src: "/icons/linkedin.svg" },
 ];
 
-const links = ["Contact us", "Privacy policy", "Terms & conditions"];
+const links = [
+  { label: "Contact us", href: WHATSAPP_URL, external: true },
+  { label: "Privacy policy", href: "#" },
+  { label: "Terms & conditions", href: "#" },
+];
 
 export function SiteFooter() {
   return (
@@ -33,8 +38,12 @@ export function SiteFooter() {
           ))}
         </div>
         <nav className={s.footerLinks} aria-label="Footer">
-          {links.map((label) => (
-            <a key={label} href="#">
+          {links.map(({ label, href, external }) => (
+            <a
+              key={label}
+              href={href}
+              {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            >
               {label}
             </a>
           ))}
