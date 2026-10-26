@@ -9,7 +9,7 @@ const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/company/taggy-ae/", src: "/icons/linkedin.svg" },
 ];
 
-const links = ["Helpful guides", "Faqs", "Contact us", "Privacy policy", "Terms & conditions"];
+const links = ["Contact us", "Privacy policy", "Terms & conditions"];
 
 export function SiteFooter() {
   return (
