@@ -16,12 +16,12 @@ const links = [
   { label: "Terms & conditions", href: "#" },
 ];
 
-export function SiteFooter() {
+export function SiteFooter({ showStoreBadges = true }: { showStoreBadges?: boolean }) {
   return (
     <footer id="download" className={s.footer}>
       <div className={s.footerTop}>
         <Image src="/icons/taggy-logo.svg" alt="Taggy" width={104} height={24} />
-        <StoreBadges size="sm" />
+        {showStoreBadges && <StoreBadges size="sm" />}
       </div>
       <div className={s.footerBottom}>
         <div className={s.socials}>

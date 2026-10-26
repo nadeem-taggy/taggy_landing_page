@@ -312,7 +312,7 @@ export default function OurStoryPage() {
           </div>
         </section>
       </main>
-      <SiteFooter />
+      <SiteFooter showStoreBadges={false} />
     </>
   );
 }
