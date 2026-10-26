@@ -19,8 +19,8 @@ export function SiteHeader({ active }: { active?: string }) {
     <header>
       <div className={s.promo}>
         <p>
-          50% off our listing service this November use code{" "}
-          <strong>LISTING50</strong>
+          Want us to upload your items on your behalf, book our{" "}
+          <strong>listing service</strong> today.
         </p>
       </div>
       <div className={s.navBar}>
