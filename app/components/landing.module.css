@@ -660,6 +660,41 @@
   max-width: none;
 }
 
+.swipeTrack {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  height: 560px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 calc(50% - 134px);
+}
+
+.swipeTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.swipeItem {
+  flex: none;
+  max-width: none;
+  scroll-snap-align: center;
+}
+
+.swipeDots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.swipeDots button {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
 .dots {
   gap: 8px;
   justify-content: center;
@@ -1145,4 +1180,45 @@
     font-size: 13px;
     line-height: 1.5;
   }
+}
+
+/* ---------- video modal ---------- */
+.videoOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.videoFrame {
+  position: relative;
+  width: min(960px, 100%);
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 12px;
+}
+
+.videoFrame iframe,
+.videoFrame video {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+.videoClose {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  padding: 0 8px;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
 }

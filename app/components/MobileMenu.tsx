@@ -1,8 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import { DownloadButton } from "./DownloadButton";
+import { NavLink } from "./NavLink";
+import { PromoText } from "./PromoText";
 import s from "./landing.module.css";
 
 type MobileMenuProps = {
@@ -43,9 +45,7 @@ export function MobileMenu({ links, active }: MobileMenuProps) {
       {open && (
         <div id="mobile-menu" className={s.menuOverlay} role="dialog" aria-modal="true" aria-label="Menu">
           <div className={s.menuPromo}>
-            <p>
-              50% off our listing service this November use code <strong>LISTING50</strong>
-            </p>
+            <PromoText />
           </div>
           <div className={s.menuTop}>
             <Image src="/icons/taggy-logo.svg" alt="Taggy" width={87} height={20} />
@@ -60,7 +60,7 @@ export function MobileMenu({ links, active }: MobileMenuProps) {
           </div>
           <nav className={s.menuList} aria-label="Main">
             {links.map((link) => (
-              <Link
+              <NavLink
                 key={link.label}
                 href={link.href}
                 className={link.label === active ? s.menuItemActive : s.menuItem}
@@ -69,13 +69,13 @@ export function MobileMenu({ links, active }: MobileMenuProps) {
               >
                 <span>{link.label}</span>
                 <Image src="/icons/chevron-right.svg" alt="" width={24} height={24} />
-              </Link>
+              </NavLink>
             ))}
           </nav>
           <div className={s.menuCta}>
-            <Link className={s.buttonDark} href="/#download" onClick={() => setOpen(false)}>
+            <DownloadButton className={s.buttonDark} onClick={() => setOpen(false)}>
               Download App
-            </Link>
+            </DownloadButton>
           </div>
         </div>
       )}

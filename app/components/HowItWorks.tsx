@@ -3,20 +3,20 @@ import s from "./landing.module.css";
 
 const steps = [
   {
-    title: "Browse, Sell or List",
-    body: "Shopping is made easier with smart auto-tags, image search, knowing your algorithms. Discover curated drops or list your items in seconds. Thanks to smart auto-tags, image search, and pricing tips -your wardrobe refresh?",
+    title: "Discover something special",
+    body: "Browse curated drops and personalized recommendations. Find the right piece faster with image search, smart tags and useful filters.",
   },
   {
-    title: "On your behalf",
-    body: "Remove the stress of listing your items and we can do this on your behalf. Book the team, approve & price our uploads and await the sales.",
+    title: "Sell it yourself or leave it to us",
+    body: "List directly through platform in minutes, or book our team to photograph, list and package your items for you.",
   },
   {
-    title: "Save dirhams",
-    body: "Want to save even more? Make an offer and wait for the seller to accept. No chasing, no chaos - just seamless resale.",
+    title: "Make or receive offers",
+    body: "Buyers can make offers directly through Taggy. Sellers can review and accept. No chasing, no chaos - just seamless resale.",
   },
   {
-    title: "Same day delivery",
-    body: "Our delivery partners can deliver your next items within 4 hours.",
+    title: "Enjoy same day delivery",
+    body: "Choose from available delivery options at checkout, with same-day delivery arriving within 4hrs.",
   },
   {
     title: "Loved, again.",

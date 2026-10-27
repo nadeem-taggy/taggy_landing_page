@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { SHOW_BLOGS } from "../../site-config";
 import { Newsletter } from "../../components/Newsletter";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
@@ -37,6 +39,7 @@ function ArticleSection({ section }: { section: Section }) {
 }
 
 export default function VintedAlternativePage() {
+  if (!SHOW_BLOGS) notFound();
   return (
     <>
       <SiteHeader active="Blogs" />
@@ -214,7 +217,6 @@ export default function VintedAlternativePage() {
         </section>
 
         <Newsletter
-          description="For all our updates provide your contact details."
           buttonLabel="Update me!"
         />
       </main>
