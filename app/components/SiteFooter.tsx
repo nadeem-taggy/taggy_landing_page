@@ -12,8 +12,6 @@ const socials = [
 
 const links = [
   { label: "Contact us", href: WHATSAPP_URL, external: true },
-  { label: "Privacy policy", href: "#" },
-  { label: "Terms & conditions", href: "#" },
 ];
 
 export function SiteFooter({ showStoreBadges = true }: { showStoreBadges?: boolean }) {
