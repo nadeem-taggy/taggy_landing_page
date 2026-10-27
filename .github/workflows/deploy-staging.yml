@@ -1,0 +1,60 @@
+name: Deploy staging
+on:
+  push:
+    branches: [staging]
+  workflow_dispatch:
+
+concurrency: { group: staging-deploy, cancel-in-progress: false }
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    # Variables and the AWS role come from the repo's "staging" environment
+    # (see deploy/staging/README.md in the backend repo).
+    environment: staging
+    runs-on: ubuntu-24.04-arm   # the server is Graviton (arm64)
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+      - uses: aws-actions/amazon-ecr-login@v2
+
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/arm64
+          push: true
+          tags: ${{ vars.ECR_REGISTRY }}/taggy-landing:${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Deploy on server
+        run: |
+          # deploy.sh is installed by the backend deploy: run that workflow first.
+          # The server can live in a different region from ECR and the SSM secrets (AWS_REGION).
+          R="${{ vars.INSTANCE_REGION || vars.AWS_REGION }}"
+          CMD_ID=$(aws ssm send-command --region "$R" \
+            --instance-ids "${{ vars.INSTANCE_ID }}" \
+            --document-name AWS-RunShellScript \
+            --comment "deploy landing ${{ github.sha }}" \
+            --parameters 'commands=["/opt/taggy/deploy.sh landing ${{ github.sha }}"],executionTimeout=["900"]' \
+            --query Command.CommandId --output text)
+          aws ssm wait command-executed --region "$R" --command-id "$CMD_ID" --instance-id "${{ vars.INSTANCE_ID }}" || true
+          aws ssm get-command-invocation --region "$R" --command-id "$CMD_ID" --instance-id "${{ vars.INSTANCE_ID }}" \
+            --query '[Status,StandardOutputContent,StandardErrorContent]' --output text
+          [ "$(aws ssm get-command-invocation --region "$R" --command-id "$CMD_ID" --instance-id "${{ vars.INSTANCE_ID }}" --query Status --output text)" = Success ]
+
+      - name: Smoke test
+        run: |
+          for i in $(seq 1 12); do
+            curl -fsS -o /dev/null https://staging-taggy.com/ && exit 0
+            sleep 10
+          done
+          echo "landing health check failed" >&2; exit 1
