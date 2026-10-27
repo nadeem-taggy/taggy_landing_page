@@ -660,6 +660,41 @@
   max-width: none;
 }
 
+.swipeTrack {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  height: 560px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 calc(50% - 134px);
+}
+
+.swipeTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.swipeItem {
+  flex: none;
+  max-width: none;
+  scroll-snap-align: center;
+}
+
+.swipeDots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.swipeDots button {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
 .dots {
   gap: 8px;
   justify-content: center;
