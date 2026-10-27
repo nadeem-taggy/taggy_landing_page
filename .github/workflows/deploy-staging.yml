@@ -54,7 +54,7 @@ jobs:
       - name: Smoke test
         run: |
           for i in $(seq 1 12); do
-            curl -fsS -o /dev/null https://staging-taggy.com/ && exit 0
+            curl -fsS -o /dev/null https://staging.taggy.ae/ && exit 0
             sleep 10
           done
           echo "landing health check failed" >&2; exit 1
