@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { DownloadButton } from "./DownloadButton";
 import { MobileMenu } from "./MobileMenu";
 import { NavLink } from "./NavLink";
 import { PromoText } from "./PromoText";
@@ -42,9 +43,7 @@ export function SiteHeader({ active }: { active?: string }) {
           </nav>
         </div>
         <div className={s.navActions}>
-          <NavLink className={s.buttonDark} href="/#download">
-            Download App
-          </NavLink>
+          <DownloadButton className={s.buttonDark}>Download App</DownloadButton>
           <MobileMenu links={links} active={active} />
         </div>
       </div>

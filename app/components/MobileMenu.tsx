@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { DownloadButton } from "./DownloadButton";
 import { NavLink } from "./NavLink";
 import { PromoText } from "./PromoText";
 import s from "./landing.module.css";
@@ -72,9 +73,9 @@ export function MobileMenu({ links, active }: MobileMenuProps) {
             ))}
           </nav>
           <div className={s.menuCta}>
-            <NavLink className={s.buttonDark} href="/#download" onClick={() => setOpen(false)}>
+            <DownloadButton className={s.buttonDark} onClick={() => setOpen(false)}>
               Download App
-            </NavLink>
+            </DownloadButton>
           </div>
         </div>
       )}

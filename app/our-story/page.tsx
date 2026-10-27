@@ -283,7 +283,7 @@ export default function OurStoryPage() {
         </section>
 
         {/* 7. Download band */}
-        <section className={s.download}>
+        <section id="download" className={s.download}>
           <div className={`${s.inner} ${s.downloadInner}`}>
             <div className={s.downloadText}>
               <h2 className={`${s.display40} ${s.downloadTitle}`}>Download our app today.</h2>

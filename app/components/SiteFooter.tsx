@@ -16,7 +16,7 @@ const links = [
 
 export function SiteFooter({ showStoreBadges = true }: { showStoreBadges?: boolean }) {
   return (
-    <footer id="download" className={s.footer}>
+    <footer id={showStoreBadges ? "download" : undefined} className={s.footer}>
       <div className={s.footerTop}>
         <Image src="/icons/taggy-logo.svg" alt="Taggy" width={104} height={24} />
         {showStoreBadges && <StoreBadges size="sm" />}
