@@ -4,6 +4,9 @@ COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
+# Public API address, baked into the browser bundle (docker build --build-arg NEXT_PUBLIC_API_URL=...).
+ARG NEXT_PUBLIC_API_URL
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
 # shortcut: Turbopack (the default) fails on next/font/google in Next 16.4.2; drop --webpack once a release fixes it.
 RUN npx next build --webpack
 
