@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { WHATSAPP_BOOKING_URL } from "../site-config";
+import { VideoButton } from "./VideoButton";
 import s from "./landing.module.css";
 
 const points = [
@@ -42,9 +43,9 @@ export function ListingService() {
               >
                 Contact us to Book Now
               </a>
-              <a className={s.buttonDark} href="#">
+              <VideoButton video="listing" className={s.buttonDark}>
                 Watch video
-              </a>
+              </VideoButton>
             </div>
           </div>
         </div>

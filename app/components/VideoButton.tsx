@@ -44,7 +44,7 @@ function loadLanding() {
 
 // Plays the video set in the admin panel (Landing page). Hidden until a link is set there, so a
 // button never points at nothing.
-export function VideoButton({ video, className, children }: { video: "buyer" | "seller"; className: string; children: ReactNode }) {
+export function VideoButton({ video, className, children }: { video: "buyer" | "seller" | "listing"; className: string; children: ReactNode }) {
   const [player, setPlayer] = useState<Player | null>(null);
   const [open, setOpen] = useState(false);
 
