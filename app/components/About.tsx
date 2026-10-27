@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { VideoButton } from "./VideoButton";
 import s from "./landing.module.css";
 
 const photo = (className: string) => (
@@ -62,12 +63,12 @@ export function About() {
             </div>
           </div>
           <div className={s.buttonRow}>
-            <a className={s.buttonPapaya} href="#">
+            <VideoButton video="buyer" className={s.buttonPapaya}>
               Watch Buyer Experience
-            </a>
-            <a className={s.buttonOutline} href="#">
+            </VideoButton>
+            <VideoButton video="seller" className={s.buttonOutline}>
               Watch Seller Experience
-            </a>
+            </VideoButton>
           </div>
         </div>
         {photo(`${s.aboutImage} ${s.hideOnPhone}`)}
