@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { SiteFooter } from "../components/SiteFooter";
+import { APP_STORE_URL, GOOGLE_PLAY_URL } from "../site-config";
 import { SiteHeader } from "../components/SiteHeader";
 import { StoreBadges } from "../components/StoreBadges";
 import s from "./our-story.module.css";
@@ -282,14 +283,14 @@ export default function OurStoryPage() {
         </section>
 
         {/* 7. Download band */}
-        <section className={s.download}>
+        <section id="download" className={s.download}>
           <div className={`${s.inner} ${s.downloadInner}`}>
             <div className={s.downloadText}>
               <h2 className={`${s.display40} ${s.downloadTitle}`}>Download our app today.</h2>
               <p className={s.downloadLead}>We&apos;re so glad you&apos;re here.</p>
             </div>
             <div className={s.badgesLg}>
-              <a href="#" aria-label="Get it on Google Play">
+              <a href={GOOGLE_PLAY_URL} aria-label="Get it on Google Play" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/our-story/badge-google-play-lg.svg"
                   alt="Get it on Google Play"
@@ -297,7 +298,7 @@ export default function OurStoryPage() {
                   height={64}
                 />
               </a>
-              <a href="#" aria-label="Download on the App Store">
+              <a href={APP_STORE_URL} aria-label="Download on the App Store" target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/our-story/badge-app-store-lg.svg"
                   alt="Download on the App Store"
@@ -312,7 +313,7 @@ export default function OurStoryPage() {
           </div>
         </section>
       </main>
-      <SiteFooter />
+      <SiteFooter showStoreBadges={false} />
     </>
   );
 }

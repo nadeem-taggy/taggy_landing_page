@@ -21,7 +21,6 @@ export default function MeetTheTeamPage() {
         <TechTeam />
         <Community />
         <Newsletter
-          description="For all our updates provide your contact details."
           buttonLabel="Update me!"
         />
       </main>

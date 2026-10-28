@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Inter_Tight, Playfair_Display } from "next/font/google";
 import { DesignScale } from "./components/DesignScale";
+import { HashScroll } from "./components/HashScroll";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -32,10 +33,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${playfair.variable} ${interTight.variable} ${inter.variable}`}
     >
       <body>
         <DesignScale>{children}</DesignScale>
+        <HashScroll />
       </body>
     </html>
   );

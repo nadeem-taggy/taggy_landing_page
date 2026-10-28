@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { SHOW_BLOGS } from "../site-config";
 import { Newsletter } from "../components/Newsletter";
 import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
@@ -21,6 +23,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogsPage() {
+  if (!SHOW_BLOGS) notFound();
   return (
     <>
       <SiteHeader active="Blogs" />
@@ -75,7 +78,6 @@ export default function BlogsPage() {
         </section>
 
         <Newsletter
-          description="For all our updates provide your contact details."
           buttonLabel="Update me!"
         />
       </main>

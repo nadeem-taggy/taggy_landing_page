@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { DownloadButton } from "./DownloadButton";
 import { MobileMenu } from "./MobileMenu";
+import { NavLink } from "./NavLink";
+import { PromoText } from "./PromoText";
+import { SHOW_BLOGS } from "../site-config";
 import s from "./landing.module.css";
 
 const links = [
@@ -11,17 +15,14 @@ const links = [
   { label: "Meet the Team", href: "/meet-the-team" },
   { label: "Our Story", href: "/our-story" },
   { label: "Press", href: "/press" },
-  { label: "Blogs", href: "/blogs" },
+  ...(SHOW_BLOGS ? [{ label: "Blogs", href: "/blogs" }] : []),
 ];
 
 export function SiteHeader({ active }: { active?: string }) {
   return (
     <header>
       <div className={s.promo}>
-        <p>
-          50% off our listing service this November use code{" "}
-          <strong>LISTING50</strong>
-        </p>
+        <PromoText />
       </div>
       <div className={s.navBar}>
         <div className={s.navLeft}>
@@ -30,21 +31,19 @@ export function SiteHeader({ active }: { active?: string }) {
           </Link>
           <nav className={s.navLinks} aria-label="Main">
             {links.map((link) => (
-              <Link
+              <NavLink
                 key={link.label}
                 href={link.href}
                 className={link.label === active ? s.navActive : undefined}
                 aria-current={link.label === active ? "page" : undefined}
               >
                 {link.label}
-              </Link>
+              </NavLink>
             ))}
           </nav>
         </div>
         <div className={s.navActions}>
-          <Link className={s.buttonDark} href="/#download">
-            Download App
-          </Link>
+          <DownloadButton className={s.buttonDark}>Download App</DownloadButton>
           <MobileMenu links={links} active={active} />
         </div>
       </div>

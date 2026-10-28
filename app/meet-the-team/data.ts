@@ -48,8 +48,8 @@ export const people: Person[] = [
 ];
 
 export const techTeam: Person[] = [
-  { name: "Nadeem", role: "Full Stack Developer", photo: `${dir}/tech-1.jpg` },
-  { name: "Shadab", role: "Developer", photo: `${dir}/tech-2.jpg` },
+  { name: "Nadeem", role: "Senior Software Developer", photo: `${dir}/tech-1.jpg` },
+  { name: "Shadab", role: "Software Developer", photo: `${dir}/tech-2.jpg` },
 ];
 
 // p1..p6 match the position classes in the stylesheet. "tilt" picks the rotation (+15deg or -10.94deg).

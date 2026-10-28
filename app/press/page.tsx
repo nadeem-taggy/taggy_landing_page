@@ -74,7 +74,6 @@ export default function PressPage() {
 
         <Headlines />
         <Newsletter
-          description="For all our updates provide your contact details."
           buttonLabel="Update me!"
         />
       </main>
