@@ -31,7 +31,7 @@ export function HowItWorks() {
         <div className={s.howLeft}>
           <h2 className={s.h2Large}>How it works</h2>
           <Image
-            src="/mockups/how-it-works.png"
+            src="/mockups/how-it-works-v2.png"
             alt="The Taggy app home screen"
             width={568}
             height={619}
@@ -39,7 +39,7 @@ export function HowItWorks() {
             className={`${s.howPanel} ${s.hideOnPhone}`}
           />
           <Image
-            src="/mockups/mobile-how-it-works.png"
+            src="/mockups/mobile-how-it-works-v2.png"
             alt="The Taggy app home screen"
             width={354}
             height={386}
