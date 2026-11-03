@@ -12,6 +12,7 @@ const socials = [
 
 const links = [
   { label: "Contact us", href: WHATSAPP_URL, external: true },
+  { label: "Delete account", href: "/delete-account", external: false },
 ];
 
 export function SiteFooter({ showStoreBadges = true }: { showStoreBadges?: boolean }) {
