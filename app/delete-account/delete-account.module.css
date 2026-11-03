@@ -41,6 +41,25 @@
   list-style: decimal;
 }
 
+.bullets {
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.block h3 {
+  font-weight: 600;
+  color: var(--black);
+}
+
+.block p a,
+.block address a {
+  text-decoration: underline;
+}
+
+.block address {
+  font-style: normal;
+}
+
 .form {
   display: flex;
   flex-direction: column;
