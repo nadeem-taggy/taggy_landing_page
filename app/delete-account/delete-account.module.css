@@ -1,0 +1,102 @@
+.page {
+  background: var(--brown-200);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 642px;
+  margin: 0 auto;
+  padding: 76px 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.title {
+  font-family: var(--font-playfair), serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -1.28px;
+  color: var(--black);
+  text-align: center;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.list {
+  padding-left: 20px;
+  list-style: decimal;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.input {
+  padding: 12px 14px;
+  border: 1px solid var(--powder-blue-500);
+  border-radius: 12px;
+  background: var(--white);
+  font: inherit;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.input:focus-visible,
+.button:focus-visible {
+  outline: 2px solid var(--black);
+  outline-offset: 2px;
+}
+
+.button {
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--black);
+  color: var(--white);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.note {
+  font-size: 14px;
+}
+
+.note a {
+  text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+  .inner {
+    padding: 48px 16px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+}
