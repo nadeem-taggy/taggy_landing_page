@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://taggy.ae/",
-    title: "Taggy",
+    title: "Taggy - Shop, Sell & List",
     description: "The app for circular shopping and selling.",
     images: [{ url: "https://taggy.ae/og-image.jpg", width: 1200, height: 630 }],
   },
